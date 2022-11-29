@@ -5,7 +5,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 26px;
   color: #151e27;
   line-height: 120%;
 }
@@ -19,6 +19,7 @@ body {
 
 button {
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -131,6 +132,10 @@ h6 {
   width: 32px;
   height: 32px;
 }
+.burger {
+  display: none;
+  border: none;
+}
 /*---------------------------------------------------*/
 .main {
   display: flex;
@@ -157,7 +162,7 @@ h6 {
 .title {
   width: inherit;
   height: 78px;
-  font-size: 4rem;
+  font-size: 65px;
   line-height: 120%;
   text-align: center;
   letter-spacing: -0.03em;
@@ -368,6 +373,7 @@ text-transform: none;
 .diagnostics__text {
   font-size: 41px;
   color: #ffffff;
+  padding: 64px;
 }
 .buttons__diagnostics {
   display: flex;
@@ -506,6 +512,9 @@ text-transform: none;
   flex-direction: column;
   gap: 24px;
 }
+.content__container-640{
+  display: none;
+}
 .map {
   width: 1024px;
   height: 650px;
@@ -513,13 +522,16 @@ text-transform: none;
 .city {
   width: 100px;
   height: 31px;
-  text-align: center;
+  margin-bottom: 24px;
 }
 .street {
-  width: 298px;
+  width: 100%;
   height: 62px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9dbdd;
 }
 .communication {
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -535,7 +547,6 @@ text-transform: none;
   align-items: center;
   padding: 0px;
   gap: 16px;
-
   width: 248px;
   height: 24px;
 }
@@ -544,6 +555,7 @@ text-transform: none;
   height: 24px;
 }
 .metro {
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -893,54 +905,69 @@ ul {
   background-color: #151e27;
   border: none;
 }
-@media (max-width: 748px) {
-  .menu__list {
-    display: none;
-    width: 0px;
-  }
-  .header{
+@media (max-width: 640px) {
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .header__container{
+  .header__container {
     max-width: 600px;
   }
-  .aaa {
+  .tel-number__2 {
     display: none;
   }
-  .menu__telephone{
+  .menu__list {
+    display: none;
+  }
+  .menu__icons-enter {
+    width: 144px;
+  }
+  .burger {
+    display: block;
+  }
+
+  .menu__telephone {
     width: 152px;
   }
+  /*---------------------------------------------------------*/
   .main {
     max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .news-and-cases{
-    height: 1257px;
-  }
-  .title{
-    font-size: 41px;
-  }
-  .left__text{
-content: "Samsung Galaxy Buds 2 Pro получили первое обновление ПО";
-content: none;
+    gap: 104px;
   }
 
+  .title {
+    font-size: 41px;
+  }
+  .left__text {
+    content: "Samsung Galaxy Buds 2 Pro получили первое обновление ПО";
+    content: none;
+  }
+  /*---------------------------------------------------------*/
+  .news-and-cases {
+    height: 1257px;
+  }
   .news-and-cases__grid {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 276px;
+    grid-auto-rows: 248px !important;
     grid-column-gap: 30px;
     grid-row-gap: 32px;
     background-size: cover;
+    height: 1080px;
   }
 
   .box__left {
     position: relative;
     grid-column: 1/3;
     grid-row: 1 / 3;
+    height: 520px;
+  }
+  .box__right-top {
+    position: relative;
+    height: 248px;
   }
   .box__left img {
     object-position: center;
@@ -949,22 +976,25 @@ content: none;
     position: relative;
     grid-column: 1/3;
     grid-row: 3/4;
+    height: 248px;
   }
-.box__right-bottom-right{
-  position: relative;
-}
+  .box__right-bottom-right {
+    position: relative;
+    height: 248px;
+  }
 
-.box__right-bottom-right img{
-  width: 100%;
-}
-
+  .box__right-bottom-right img {
+    width: 100%;
+  }
+  /*---------------------------------------------------------*/
   .wrapper-news {
+    gap: 64px;
     max-width: 600px;
     height: 862px;
   }
   .image-slider-wrapper {
     position: relative;
-  
+
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -972,40 +1002,284 @@ content: none;
     gap: 65px;
   }
   .news__image-slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 30px;
     width: 1232px;
-    height: 665px;
+    height: 610px;
+  }
 
-  }
-  .image-slider__slide {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #d9dbdd;
-    border-radius: 32px 32px 32px 0px;
-  }
-  .image-slider__image{
+  .image-slider__image {
     position: relative;
   }
-  .image-slider__image img{
+  .image-slider__image img {
     width: 100%;
   }
   .image-slider__slide-news {
-    height: 665px !important;
+    height: 610px !important;
+    gap: 16px;
   }
   .text-to-photo {
-    height: 76px;
+    height: 128px;
     width: 283px;
     font-weight: 500;
     font-size: 16px;
   }
-  .news__swiper-buttons{
+  .news__swiper-buttons {
     position: absolute;
-    left: 20%;
+    left: 50%;
+    transform: translate(-50%);
     bottom: 0px;
   }
+  /*---------------------------------------------------------*/
+  .wrapper-cases {
+    gap: 64px;
+    max-width: 600px;
+    height: 862px;
+  }
+  .cases__image-slider {
+    width: 1232px;
+    height: 610px;
+  }
+  .image-slider__slide-cases {
+    height: 610px !important;
+    gap: 16px;
+  }
+  .cases__swiper-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0px;
+  }
+  /*---------------------------------------------------------*/
+  .diagnostics {
+    width: 600px;
+    height: 290px;
+    flex-direction: column;
+  }
+  .diagnostics__text {
+    font-size: 41px;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-bottom: 32px;
+  }
+  .buttons__diagnostics {
+    width: 536px;
+    height: 80px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+  }
 
+  .call {
+    width: 252px;
+  }
+
+  .whrite {
+    width: 252px;
+  }
+
+  .buttons__diagnostics-text-style {
+    width: 161px;
+    height: 26px;
+    font-weight: 500;
+  }
+
+  /*---------------------------------------------------------*/
+
+  .addresses {
+    width: 640px;
+    height: 1369px;
+  }
+  .addresses__heading {
+    width: 600px;
+    height: 158px;
+    gap: 40px;
+  }
+  .block-top {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .addresses__heading .title {
+    text-align: start;
+  }
+  .all-adresses {
+    padding: 0px;
+    width: 600px;
+    height: 18px;
+  }
+
+  .enumeration__all-adresses {
+    gap: 40px;
+    width: 380px;
+  }
+  .font__adresses {
+    border-bottom: 2px dashed #151e27;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .addresses__content {
+    width: 600px;
+    height: 1147px;
+    left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .content__container {
+   display: none;
+  }
+  .city-street{
+    font-size: 26px;
+    font-weight: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .content__container-640{
+    display: block;
+    width: 600px;
+    height: 361px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .tel-time{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    width: 600px;
+  }
+  .map {
+    width: 1024px;
+    height: 650px;
+  }
+  .city {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700px;
+  }
+  .street {
+    width: 424px;
+    height: 31px;
+    font-size: 26px;
+    font-weight: 700px;
+  }
+  .communication {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 511px;
+    height: 227px;
+  }
+  .metro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 248px;
+    height: 24px;
+  }
+  .logo__container {
+    width: 24px;
+    height: 24px;
+  }
+  .metro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text__container {
+    width: 248px;
+    height: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .connection,
+  .time {
+    display: flex;
+    align-items: center;
+    width: 284px;
+    height: 59px;
+    gap: 16px;
+  }
+  .time{
+    width: 195px;
+  }
+  .connection__content,
+  .time__content {
+    width: 284px;
+    height: 59px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .connect__tel-number,
+  .time__content-work {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  .time {
+    margin-bottom: 10px;
+  }
+  .communication__buttons {
+    flex-direction: row-reverse;
+    padding: 0px;
+    gap: 32px;
+    margin-top: 27px;
+    width: 600px;
+    height: 56px;
+  }
+  .request-for-repairs,
+  .content__container-call {
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 320px;
+    height: 56px;
+    background: #151e27;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+  .communication__pay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 248px;
+    height: 32px;
+  }
+
+  .communication__pay-card {
+    width: 50px;
+    height: 32px;
+  }
+
+  .pay-card__botton {
+    border: none;
+    width: 50px;
+    height: 32px;
+  }
+
+  /*---------------------------------------------------------*/
 }

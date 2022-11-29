@@ -39,7 +39,7 @@
               >
             </div>
 
-            <div class="tel-number aaa">
+            <div class="tel-number tel-number__2">
               <a href="tel:+7 (495) 641 23 36" class="tel-number__font"
                 >+7 (495) 641 23 36</a
               >
@@ -47,6 +47,9 @@
           </div>
 
           <div class="menu__icons-enter">
+            <div class="menu__icon burger">
+              <button><img src="Group 409burger.svg" alt="" /></button>
+            </div>
             <div class="menu__icon">
               <a href="#"
                 ><img src="отследить заказ.svg" alt="отследить заказ"
@@ -68,18 +71,14 @@
         </div>
         <div class="news-and-cases__grid box">
           <div class="box__left left">
-            <img
-              src="box__left.png"
-              alt=""
-            
-            />
+            <img src="box__left.png" alt="" />
             <div class="left__text box__font">
               Samsung планирует производить экраны смартфонов по новой
               технологии Eco2 OLED
             </div>
           </div>
           <div class="box__right-top right-top">
-            <img src="box__right-top.png" alt=""  />
+            <img src="box__right-top.png" alt="" />
             <div class="right-top__text box__font">
               Как работает экосистема HUAWEI
             </div>
@@ -88,7 +87,6 @@
             <img
               src="box__left-bottom-left.png"
               alt=""
-             
               style="border-radius: 32px"
             />
             <div class="bottom__text box__font">
@@ -99,8 +97,6 @@
             <img
               src="box__right-bottom-right.png"
               alt=""
-              height="276px"
-              width="320px"
               style="border-radius: 32px"
             />
             <div class="bottom__text box__font">Возможности Galaxy Watch 4</div>
@@ -248,9 +244,7 @@
       </div>
 
       <div class="diagnostics">
-        <div class="diagnostics__text" style="padding: 64px">
-          Нужна диагностика устройства?
-        </div>
+        <div class="diagnostics__text">Нужна диагностика устройства?</div>
         <div class="buttons__diagnostics">
           <button class="call">
             <div class="call__button buttons__diagnostics-text-style">
@@ -297,6 +291,7 @@
             <div class="street">
               <h4>ул. Садовая-Кудринская, д.20</h4>
             </div>
+
             <div class="communication">
               <div class="metro">
                 <div class="metro-container">
@@ -362,10 +357,101 @@
               <button class="request-for-repairs">Заявка на ремонт</button>
               <button
                 class="content__container-call"
-                style="background-color: white; color: #151e27"
+                style="
+                  background-color: white;
+                  color: #151e27;
+                  border: 2px solid #151e27;
+                "
               >
                 Позвонить
               </button>
+            </div>
+          </div>
+          <div class="content__container-640">
+            <div class="city-street">
+              <div class="city">
+                <h4>Москва</h4>
+              </div>
+              <div class="street">
+                <h4>ул. Садовая-Кудринская, д.20</h4>
+              </div>
+            </div>
+            <div class="communication">
+              <div class="metro">
+                <div class="metro-container">
+                  <div class="logo__container">
+                    <img src="метро.svg" alt="" />
+                  </div>
+                  <div class="text__container">метро Баррикадная</div>
+                </div>
+                <div class="metro-container">
+                  <div class="logo__container">
+                    <img src="метроgreen.svg" alt="" />
+                  </div>
+                  <div class="text__container">метро Маяковская</div>
+                </div>
+                <div class="metro-container">
+                  <div class="logo__container">
+                    <img src="метроred.svg" alt="" />
+                  </div>
+                  <div class="text__container">метро Краснопресненская</div>
+                </div>
+              </div>
+              <div class="tel-time">
+                <div class="connection">
+                  <div class="logo__container">
+                    <img src="ико/phone.svg" alt="" />
+                  </div>
+                  <div class="connection__content">
+                    <div class="connect__tel-number">+7 (495) 287 42 34</div>
+                    <div class="connect__tel-number">+7 (495) 641 23 36</div>
+                  </div>
+                </div>
+                <div class="time">
+                  <div class="logo__container">
+                    <img src="clock.png" alt="" />
+                  </div>
+                  <div class="time__content">
+                    <div class="time__content-work">Пн-Вс: 10:00 - 21:00</div>
+                    <div class="time__content-work">Сб-Вс: выходные</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="communication__pay">
+                <div class="logo__container">
+                  <img src="sign-card.svg" alt="" />
+                </div>
+                <div class="communication__pay-card">
+                  <button class="pay-card__botton">
+                    <img src="мир.svg" alt="" />
+                  </button>
+                </div>
+                <div class="communication__pay-card">
+                  <button class="pay-card__botton">
+                    <img src="Visa.svg" alt="" />
+                  </button>
+                </div>
+                <div class="communication__pay-card">
+                  <button class="pay-card__botton">
+                    <img src="MasterCard.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="communication__buttons">
+                <button class="request-for-repairs">Заявка на ремонт</button>
+                <button
+                  class="content__container-call"
+                  style="
+                    background-color: white;
+                    color: #151e27;
+                    border: 2px solid #151e27;
+                  "
+                >
+                  Позвонить
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -479,11 +565,7 @@
           </div>
           <div class="card-PayKeeper">
             <button class="button__pay">
-              <img
-                src="payKeeper.svg"
-                alt=""
-                class="logo__card-PayKeeper"
-              />
+              <img src="payKeeper.svg" alt="" class="logo__card-PayKeeper" />
             </button>
           </div>
         </div>
