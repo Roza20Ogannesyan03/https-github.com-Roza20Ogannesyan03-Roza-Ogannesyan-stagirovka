@@ -522,7 +522,6 @@ text-transform: none;
 .city {
   width: 100px;
   height: 31px;
-  margin-bottom: 24px;
 }
 .street {
   width: 100%;
@@ -559,6 +558,8 @@ text-transform: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 248px;
+  height: 88px;
 }
 .text__container {
   width: 248px;
@@ -1026,7 +1027,7 @@ ul {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: 0px;
+    bottom: 5px;
   }
   /*---------------------------------------------------------*/
   .wrapper-cases {
@@ -1046,7 +1047,7 @@ ul {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: 0px;
+    
   }
   /*---------------------------------------------------------*/
   .diagnostics {
@@ -1092,14 +1093,18 @@ ul {
     width: 600px;
     height: 158px;
     gap: 40px;
+    padding-left: 20px;
   }
   .block-top {
     font-size: 16px;
     font-weight: 600;
   }
-
+  .block-bottom .title{
+    height: 49px;
+  }
   .addresses__heading .title {
     text-align: start;
+   
   }
   .all-adresses {
     padding: 0px;
@@ -1146,6 +1151,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    padding-left: 20px;
   }
   .tel-time{
     display: flex;
@@ -1154,8 +1160,8 @@ ul {
     width: 600px;
   }
   .map {
-    width: 1024px;
-    height: 650px;
+    width: 640px;
+    height: 550px;
   }
   .city {
     text-align: center;
@@ -1173,16 +1179,16 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 24px;
+    gap: 40px;
     width: 511px;
-    height: 227px;
+    height: 327px;
   }
   .metro-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 16px;
+    gap: 8px;
 
     width: 248px;
     height: 24px;
@@ -1214,9 +1220,7 @@ ul {
     height: 59px;
     gap: 16px;
   }
-  .time{
-    width: 195px;
-  }
+
   .connection__content,
   .time__content {
     width: 284px;
@@ -1226,11 +1230,8 @@ ul {
     align-items: flex-start;
     justify-content: space-between;
   }
-  .connect__tel-number,
-  .time__content-work {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
+  .time{
+    width: 195px;
   }
   .time {
     margin-bottom: 10px;
@@ -1245,41 +1246,11 @@ ul {
   }
   .request-for-repairs,
   .content__container-call {
-    align-items: center;
-    padding: 0px;
-    gap: 10px;
-
-    width: 320px;
+    width: 284px;
     height: 56px;
-    background: #151e27;
-    border-radius: 30px;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    text-transform: uppercase;
   }
-  .communication__pay {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 16px;
-
-    width: 248px;
-    height: 32px;
-  }
-
-  .communication__pay-card {
-    width: 50px;
-    height: 32px;
-  }
-
-  .pay-card__botton {
-    border: none;
-    width: 50px;
-    height: 32px;
-  }
-
   /*---------------------------------------------------------*/
+  .footer{
+    margin-top: px;
+  }
 }
