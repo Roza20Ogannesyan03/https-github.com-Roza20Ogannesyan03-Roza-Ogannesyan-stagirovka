@@ -79,13 +79,7 @@ new Swiper(".cases__image-slider", {
   spaceBetween: 30,
   loop: true,
 });
-alert("111");
-/*const burger = document.querySelector('.menu__burger-icon');
-  burger.addEventListener('click', function(){
-    console.log('wqwqsas');
 
-   burger.classList.add('popup');
-});*/
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");
 const menu = document.querySelector(".menu__list").cloneNode(1);
