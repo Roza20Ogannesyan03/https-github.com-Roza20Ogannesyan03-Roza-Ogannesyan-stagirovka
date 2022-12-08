@@ -86,7 +86,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-
+  z-index: 1;
   width: 470px;
   height: 36px;
   font-weight: 600;
@@ -954,9 +954,13 @@ ul {
     border-radius: 50%;
     border: 2px solid #151e27;
   }
+  .menu__burger-icon.active{
+    color: #fff;
+  }
   .hamb__field {
     padding: 10px 0px;
     cursor: pointer;
+    z-index: 120;
   }
   .bar {
     display: block;
@@ -973,6 +977,9 @@ ul {
   .bar:not(:first-child) {
     margin: 3px auto;
   }
+  .bar.active{
+    color: #fff;
+  }
 
   .popup {
     position: fixed;
@@ -980,15 +987,16 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #151e27;
     z-index: 100;
     display: flex;
     transition: 0.3s;
   }
   .popup.open {
-    left: 0;
+    left: -34%;
+  
   }
-  .popup .menu {
+  .popup .menu__list {
     width: 100%;
     height: 100%;
     display: flex;
@@ -998,29 +1006,33 @@ ul {
     padding: 50px 0;
     overflow: auto;
   }
-  .popup .menu > li {
+  .popup .menu__list > li {
     width: 100%;
   }
-  .popup .menu > li > a {
+  .popup .menu__list > li > a {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px 0;
     font-size: 20px;
     font-weight: bold;
-    color: #3f3f3f;
+    color: #fff;
+    
   }
-  .popup .menu > li > a:hover {
+  .popup .menu__list > li > a:hover {
     background-color: rgba(122, 82, 179, 0.1);
   }
   .hamb__field.active .bar:nth-child(2) {
     opacity: 0;
   }
   .hamb__field.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
   }
   .hamb__field.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  .hamb__field.active .bar{
+    color: #fff;
   }
   body.noscroll {
     overflow: hidden;
@@ -1384,7 +1396,7 @@ ul {
     width: 320px;
     height: 273px;
   }
-  .adress-contacts__footer {
+  ee .adress-contacts__footer {
     display: block;
     display: flex;
     width: 600px;
@@ -1459,7 +1471,9 @@ ul {
   }
   .header__container {
     max-width: 304px;
+    gap: 98px;
   }
+
   .menu__icon {
     display: none;
   }
@@ -1684,13 +1698,13 @@ ul {
     width: 951px;
     height: 299px;
   }
-  .text__contacts-640{
+  .text__contacts-640 {
     display: none;
   }
-  .text__contacts{
+  .text__contacts {
     display: block;
   }
-  .contacts-320{
+  .contacts-320 {
     display: flex;
     flex-direction: column-reverse;
     width: 304px;

@@ -1,5 +1,4 @@
-
-  var swiper = new Swiper(".news__image-slider", {
+var swiper = new Swiper(".news__image-slider", {
   simulateTouch: true,
   navigation: {
     nextEl: ".news__swiper-button-next",
@@ -20,7 +19,7 @@
         );
       },
     },*/
-    
+
   on: {
     slideChange: function (swiper) {
       console.log("bbb");
@@ -81,17 +80,26 @@ new Swiper(".cases__image-slider", {
   loop: true,
 });
 alert("111");
+/*const burger = document.querySelector('.menu__burger-icon');
+  burger.addEventListener('click', function(){
+    console.log('wqwqsas');
+
+   burger.classList.add('popup');
+});*/
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");
-const menu = document.querySelector("#menu").cloneNode(1);
+const menu = document.querySelector(".menu__list").cloneNode(1);
 const body = document.body;
-
+const bar = document.querySelectorAll(".bar");
 hamb.addEventListener("click", hambHandler);
 
 function hambHandler(e) {
   e.preventDefault();
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
+  if (hamb.classList.contains("active")) {
+    bar.style.color = "#fff";
+  }
   body.classList.toggle("noscroll");
   renderPopup();
 }
