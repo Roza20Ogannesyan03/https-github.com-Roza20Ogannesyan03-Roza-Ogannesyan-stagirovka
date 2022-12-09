@@ -85,6 +85,7 @@ const popup = document.querySelector("#popup");
 const menu = document.querySelector(".menu__list").cloneNode(1);
 const body = document.body;
 const bar = document.querySelectorAll(".bar");
+const menuBurger = document.querySelector('.menu__burger-icon');
 hamb.addEventListener("click", hambHandler);
 
 function hambHandler(e) {
@@ -92,7 +93,9 @@ function hambHandler(e) {
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
   if (hamb.classList.contains("active")) {
-    bar.style.color = "#fff";
+    console.log("11111");
+    bar.forEach(item => item.style.background = "white");
+    menuBurger.style.border = '2px solid white';
   }
   body.classList.toggle("noscroll");
   renderPopup();
@@ -113,5 +116,7 @@ links.forEach((link) => {
 function closeOnClick() {
   popup.classList.remove("open");
   hamb.classList.remove("active");
+  bar.forEach(item => item.style.background = "#151e27");
+  menuBurger.style.border = '2px solid #151e27';
   body.classList.remove("noscroll");
 }

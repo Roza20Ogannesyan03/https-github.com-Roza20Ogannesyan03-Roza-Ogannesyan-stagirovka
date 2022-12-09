@@ -953,9 +953,11 @@ ul {
     height: 28px;
     border-radius: 50%;
     border: 2px solid #151e27;
+    z-index: 130;
   }
   .menu__burger-icon.active{
     color: #fff;
+    
   }
   .hamb__field {
     padding: 10px 0px;
@@ -983,7 +985,7 @@ ul {
 
   .popup {
     position: fixed;
-    top: 75px;
+    top: 0px;
     left: -100%;
     width: 100%;
     height: 100%;
@@ -1678,6 +1680,7 @@ ul {
     align-items: center;
   }
   .adress-contacts__footer {
+    display: flex;
     flex-direction: column;
     max-width: 302px;
     height: 534px;
